@@ -1,12 +1,21 @@
  //All systemc modules should include systemc.h header file
- #include "systemc.h"
+#include "systemc.h"
+#include <vector>
+#include <cstdio>
+#include <ctime>
+#include <cmath>
+#include <algorithm>
+#include <set>
+#include <iostream>
+
+using namespace std;
  //Hello_world is module name
- SC_MODULE(hello_world) {
-	SC_CTOR(hello_world) {
+ SC_MODULE(hardware) {
+	SC_CTOR(hardware) {
 
 		// Nothing in constructor
 	}
-	void say_hello() {
+	SC_METHOD (calculate) {
 
 		//Print "Hello World" to the console.
 
@@ -19,18 +28,6 @@
 };
 
 
- // CPP program to implement traveling salesman
- // problem using naive approach.
-#include <vector>
-#include <cstdio>
-#include <ctime>
-#include <cmath>
-#include <algorithm>
-#include <set>
-#include <iostream>
-
- using namespace std;
-
  class Data
  {
  public:
@@ -42,19 +39,8 @@
      // char s[30];
 
      Data()
-     { // N cities
-         // scanf("%s", s);
-         //  cout << "Enter number of cities : ";
-         //  cin >> N;
+     { 
          N = 5;
-         // scanf("%d", &N);
-
-         // index from 1
-         // cityCoords.push_back(make_pair(0, 0));
-         // cout << cityCoords[0].first << "\n"
-         //  << cityCoords[0].second << "\n";
-         // cout << cityCoords[1].first << "\n"
-         //  << cityCoords[1].second;
 
          cityGraphCoords.push_back(make_pair(1, 0));
          cityGraphCoords.push_back(make_pair(4, 1));
@@ -309,7 +295,7 @@
 
  int sc_main(int argc, char* argv[])
  {
-     double alpha = 1;         // pheromone importance
+     double alpha = 1;         // pheromone importance T
      double beta = 2;          // visibility importance
      double evaporation = 0.1; // evaporation rate
      ACO colony(alpha, beta, evaporation);
