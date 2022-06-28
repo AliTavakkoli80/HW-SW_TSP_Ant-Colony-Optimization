@@ -307,7 +307,7 @@
      }
  };
 
- int sc_main(void)
+ int sc_main(int argc, char* argv[])
  {
      double alpha = 1;         // pheromone importance
      double beta = 2;          // visibility importance

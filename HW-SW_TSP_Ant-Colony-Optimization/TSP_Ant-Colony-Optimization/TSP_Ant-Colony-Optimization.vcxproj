@@ -78,8 +78,9 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\College\Classes And Terms\1400-2\HW and SW\systemc-2.3.3\src;$(IncludePath)</IncludePath>
-    <ReferencePath>D:\College\Classes And Terms\1400-2\HW and SW\systemc-2.3.3\msvc10\SystemCDebug;$(LibraryPath)</ReferencePath>
+    <IncludePath>C:\Users\toliat\Downloads\Compressed\systemc-2.3.3\systemc-2.3.3\src;$(IncludePath)</IncludePath>
+    <ReferencePath>$(VC_ReferencesPath_x64);</ReferencePath>
+    <LibraryPath>C:\Users\toliat\Downloads\Compressed\systemc-2.3.3\systemc-2.3.3\msvc10\SystemC\x64\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -118,13 +119,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\College\Classes And Terms\1400-2\HW and SW\systemc-2.3.3\src;%()AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\toliat\Downloads\Compressed\systemc-2.3.3\systemc-2.3.3\src</AdditionalIncludeDirectories>
       <AdditionalOptions>/vmg %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>D:\College\Classes And Terms\1400-2\HW and SW\systemc-2.3.3\msvc10\SystemC\x64\Debug\SystemC.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\toliat\Downloads\Compressed\systemc-2.3.3\systemc-2.3.3\msvc10\SystemC\x64\Debug\SystemC.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
